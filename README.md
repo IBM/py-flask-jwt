@@ -1,7 +1,9 @@
 :warning: This project is under development and is incomplete.
 
 # IBM Flask JWT
-This project provides a simple Python library for securing Flask APIs with JWT authentication. 
+This project provides a simple Python library for securing Flask APIs with JWT authentication.
+
+[![Build](https://github.com/IBM/py-flask-jwt/actions/workflows/build.yaml/badge.svg?branch=main)](https://github.com/IBM/py-flask-jwt/actions/workflows/build.yaml)
 
 ## JSON Web Tokens
 Secure endpoints are accessed by passing a [JSON Web Token](https://jwt.io/introduction) (JWT).
