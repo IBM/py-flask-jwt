@@ -1,0 +1,32 @@
+#
+# IBM Confidential
+#
+# OCO Source Materials
+#
+# Copyright IBM Corp.  2021
+#
+# The source code for this program is not published or otherwise
+# divested of its trade secrets, irrespective of what has been
+# deposited with the U.S. Copyright Office.
+#
+
+[requires]
+python_version = '3.9'
+
+[packages]
+environs = '9.3.1'
+pyjwt = {extras = ['crypto'], version = '2.3.0'}
+flask = '2.0.2'
+flask-restful = '0.3.9'
+
+[dev-packages]
+pytest = '6.2.3'
+pytest-cov = '2.11.1'
+pytest-mock = '3.6.0'
+pylint = '2.8.2'
+flake8 = '3.9.1'
+flake8-html = '0.4.1' 
+pylint-json2html = '0.3.0'
+httpretty = '1.0.5'
+setuptools = '51.3.3'
+twine = '3.4.1'
