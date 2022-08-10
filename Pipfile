@@ -1,21 +1,9 @@
-#
-# IBM Confidential
-#
-# OCO Source Materials
-#
-# Copyright IBM Corp.  2021
-#
-# The source code for this program is not published or otherwise
-# divested of its trade secrets, irrespective of what has been
-# deposited with the U.S. Copyright Office.
-#
-
 [requires]
 python_version = '3.9'
 
 [packages]
 environs = '9.3.1'
-pyjwt = {extras = ['crypto'], version = '2.3.0'}
+pyjwt = {extras = ['crypto'], version = '2.4.0'}
 flask = '2.0.2'
 flask-restful = '0.3.9'
 

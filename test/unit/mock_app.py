@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_restful import Api, Resource
-from lib.wds_auth.decorators import public, private
+from lib.ibm_flask_jwt.decorators import public, private
 
 
 class MockApp:
