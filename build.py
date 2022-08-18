@@ -25,7 +25,7 @@ setup(
     install_requires = {parse_lockfile()},
     classifiers = [
         'Programming Language :: Python :: 3',
-        'License :: Apache 2.0',
+        'License :: OSI Approved :: Apache Software License',
         'Operating System :: OS Independent',
     ],
     url = 'https://github.com/IBM/py-flask-jwt'
