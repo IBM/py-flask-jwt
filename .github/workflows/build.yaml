@@ -40,6 +40,5 @@ jobs:
           pipenv run python build.py && pipenv run python setup.py clean sdist 
       - name: Publish
         if: github.ref == 'refs/heads/main'
-        needs: ['Unit Test', 'Package']
         run: |
           pipenv run python -m twine upload dist/* -u __token__ -p ${{ secrets.PYPI_API_TOKEN }}
