@@ -1,7 +1,7 @@
 # This workflow will install Python dependencies, run tests and lint with a variety of Python versions
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
-name: Build
+name: Build Library
 
 on:
   push:
@@ -19,18 +19,27 @@ jobs:
         python-version: ["3.10"]
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v3
-      with:
-        python-version: ${{ matrix.python-version }}
-    - name: Install pipenv
-      run: |
-        pip install pipenv
-        pipenv --version
-    - name: Install dependencies
-      run: |
-        pipenv install --dev
-    - name: Test with pytest
-      run: |
-        pipenv run pytest --cov lib test
+      - name: Check Out
+        uses: actions/checkout@v3
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v3
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install Pipenv
+        run: |
+          pip install pipenv
+          pipenv --version
+      - name: Install Dependencies
+        run: |
+          pipenv install --dev
+      - name: Unit Test
+        run: |
+          pipenv run pytest --cov lib test
+      - name: Package
+        run: |
+          pipenv run python build.py && pipenv run python setup.py clean sdist 
+      - name: Publish
+        if: github.ref == 'refs/heads/main'
+        needs: ['Unit Test', 'Package']
+        run: |
+          pipenv run python -m twine upload dist/* -u __token__ -p ${{ secrets.PYPI_API_TOKEN }}

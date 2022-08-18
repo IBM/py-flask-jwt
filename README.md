@@ -17,7 +17,7 @@ The follow Python decorators are available for use on Flask API endpoints.
 The following example shows how to secure a private endpoint for a simple API built with the [Flask RESTful](https://flask-restful.readthedocs.io/en/latest/) framework. In this example, requests to the resource will return a `401 Unauthorized` response unless a valid JWT token is attached to the HTTP request.
 ```
 from flask_restful import Resource
-from wds_auth.decorators import private
+from ibm_flask_jwt.decorators import private
 
 
 class PrivateApi(Resource):
