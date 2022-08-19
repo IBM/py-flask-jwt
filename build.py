@@ -3,7 +3,7 @@ from pathlib import Path
 
 
 PACKAGE_NAME = 'ibm-flask-jwt'
-PACKAGE_VERSION = '0.0.1'
+PACKAGE_VERSION = '0.0.2'
 
 
 def parse_lockfile():

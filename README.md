@@ -1,5 +1,3 @@
-:warning: This project is under development and is incomplete.
-
 # IBM Flask JWT
 This project provides a simple Python library for securing Flask APIs with JWT authentication.
 
