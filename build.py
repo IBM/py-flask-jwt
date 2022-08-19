@@ -24,10 +24,10 @@ setup(
     version = '{PACKAGE_VERSION}',
     description = 'A simple library for securing Flask REST APIs with JWTs using decorators',
     readme = 'README.md',
-    package_dir={{'':'lib'}},
+    package_dir = {{'':'lib'}},
     packages = find_namespace_packages(where='lib', exclude=['*test*']),
     install_requires = {parse_lockfile()},
-    long_description = '{long_description}',
+    long_description = """{long_description}""",
     long_description_content_type = 'text/markdown',
     classifiers = [
         'Programming Language :: Python :: 3',
